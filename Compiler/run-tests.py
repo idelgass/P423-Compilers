@@ -27,15 +27,17 @@ typecheck_Ctup = type_check_Ctup.TypeCheckCtup().type_check
 
 typecheck_dict = {
     'source': typecheck_Ltup,
+    'shrink': typecheck_Ltup,
     'expose_allocation': typecheck_Ltup,
     'remove_complex_operands': typecheck_Ltup,
-    'explicate_control': typecheck_Ctup
+    'explicate_control': typecheck_Ctup,
 }
 interpLwhile = interp_Lwhile.InterpLwhile().interp
 interpCif = interp_Cif.InterpCif().interp
 interpLtup = interp_Ltup.InterpLtup().interp
 interpCtup = interp_Ctup.InterpCtup().interp
 interp_dict = {
+    'shrink': interpLtup,
     'expose_allocation': interpLtup,
     'remove_complex_operands': interpLtup,
     'explicate_control': interpCtup,
@@ -45,7 +47,7 @@ interp_dict = {
 }
 
 if False:
-    run_one_test(os.getcwd() + '/tests/var/add.py',
+    run_one_test(os.getcwd() + '/tests/var/test1.py',
                  'var',
                  compiler,
                  'var',

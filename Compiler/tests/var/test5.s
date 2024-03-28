@@ -5,10 +5,11 @@ _conclusion:
 
 	.align 16
 _start:
-    movq $10, %rdx
-    negq %rdx
-    movq $42, %rcx
-    addq %rdx, %rcx
+    movq $10, %rcx
+    negq %rcx
+    movq $42, %rdx
+    addq %rcx, %rdx
+    movq %rdx, %rcx
     addq $10, %rcx
     movq %rcx, %rdi
     callq _print_int
