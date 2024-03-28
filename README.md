@@ -1,8 +1,8 @@
-#Python Compiler
+# Python Compiler
 
 Work from my Compilers course taken at IU Bloomington Fall 2023. The goal of the course was to write a compiler for a limited version of the python language. Features include basic integer math and storage, register allocation, conditionals, loops, and tuples. Functions were successfully added later, but broke certain aspects of local testing and so were not included here.
 
-#How to use
+# How to use
 
 To run the test suite, nagivate to `run-tests.py` and run it. The simple `if` statment there on line 49 can be used to choose between full testing suite and individual tests.
 
