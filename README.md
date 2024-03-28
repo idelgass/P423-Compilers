@@ -4,7 +4,7 @@ Work from my Compilers course taken at IU Bloomington Fall 2023. The goal of the
 
 # How to use
 
-To run the test suite, nagivate to `run-tests.py` and run it. The simple `if` statment there on line 49 can be used to choose between full testing suite and individual tests.
+To run the test suite, first compile `runtime.c` into `runtime.o`, then nagivate to `run-tests.py` and run it. The simple `if` statment there on line 49 can be used to choose between full testing suite and individual tests. 
 
 Note that for tuple functionality `select_instructions`, `assign_homes`, and `patch_instructions` must be removed from the `interp_dict` beforehand. The `_free_ptr` variable used for tuples does not gel with how the interpreter handles testing the x86 files. This functionality has been tested and verified to be working correctly externally, but these tests are not easily replicated locally. This does cause the testing suite to display only 75/120 passes as successful. If one  re-adds `select_instructions`, `assign_homes`, and `patch_instructions` to the `interp_dict` and runs non-tuple tests individually, they can verify that these passes do in fact succeed. 
 
